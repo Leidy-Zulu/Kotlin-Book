@@ -7,8 +7,10 @@ import android.app.TaskStackBuilder
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.v4.app.NotificationCompat
 import android.view.Menu
 import android.view.MenuItem
@@ -18,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val name = getString(R.string.abc_action_bar_home_description)
         val description = getString(R.string.abc_action_bar_home_description)
         val importance = NotificationManager.IMPORTANCE_HIGH
+
         val mChannel = NotificationChannel(id, name, importance)
         mChannel.description = description
         mChannel.enableLights(true)
