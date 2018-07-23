@@ -13,16 +13,22 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ExampleNotificationActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".ResultActitivtyNotification" />
         <activity android:name=".InternalStorageActivity">
+
+        </activity>
+        <activity
+            android:name=".Lab9SQLiteAndProviders.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
     </application>
 
